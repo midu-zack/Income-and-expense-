@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  
+</head>
+<body>
+    <h1 style="text-align: center;">Income & Expense</h1>
+
+
+  <div class="grid">
+      <div>
+        <h2 style="text-align: center; padding-bottom: 30px;" >Income</h2>
+        <div >
+         <input type="text" id="category" placeholder="category" >
+         <input type="number" id="expense" placeholder="Amount:">
+         <button id="click">Submit</button>
+          
+       </div>
+
+
+
+      </div>
+      <div>
+        <div >
+          <h2  style="text-align: center; padding-bottom: 30px;" >Expense</h2>
+          <div >
+           <input type="text" id="category2" placeholder="category" >
+           <input type="number" id="expense2" placeholder="Amount:">
+           <button id="click2">Submit</button>
+         </div>  
+        </div>
+      </div>
+
+    </div>
+      
+         
+        <div style="display: flex; gap: 45rem; padding-left: 100px;">
+          <div style="padding-top: 200px; margin: left 40px; ">
+
+            <table class="tbl" id="block" style="display: none;">
+              <tbody id="tbles">
+                <tr  >
+                  <th  style="text-align: center;" colspan="2">Income</th>
+                </tr>
+                <th>Category</th>
+                
+                <th >Amount</th>
+
+              </tbody>
+            </table>
+            <div >
+              <h3 >Total Income: <span id="intotalamound"></span>₹</h3>
+    
+            </div>
+          </div>
+
+
+
+          <div style="padding-top: 200px; margin: left 40px; ">
+
+            <table class="tbl" style="display: none; " id="block1">
+              <tbody id="expenstable">
+                <tr>
+                  <th style="text-align: center;" colspan="2">Expense</th>
+                </tr>
+                <th>Category</th>
+                
+                <th >Amount</th>
+
+              </tbody>
+            </table>
+            <div >
+              <h3 >Total Expense: <span id="totalexpnse"></span>₹</h3>
+    
+            </div>
+          </div>
+        </div>
+
+        <p style="text-align: center;" >BALANCE:<span id="balnce"></span></p>
+
+        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+        
+      
+    
+
+
+
+        <script src="index.js"></script>
+         
+</body>
+</html>
