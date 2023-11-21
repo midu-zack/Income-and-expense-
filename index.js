@@ -21,33 +21,37 @@
 
     
 
-    if (inputValue =='' || Sett ==''){
+    if (inputValue ==' ' || Sett ==' '){
       inputvalue.value = '';
-     section.value = '';
+      section.value = '';
       
     alert("Income field is required");
 
-    return;   //stop this condition so stop in my code  
+    return;   //stop this condition. so stop in my code  
 
     }else if(Sett.length<4) {
 
        inputvalue.value = '';
        section.value = '';
+
        alert("catagory be at least 4 characters");
 
-      return
+      return;
     }
   
     document.getElementById("block").style.display="block";
+
     const tbsle = document.createElement("tr");
 
 
     const tab = document.createElement("td");
     tab.textContent = Sett;
+
     const tb = document.createElement("td");
     tb.textContent = inputValue;
 
   
+
 
     document.getElementById("tbles").appendChild(tbsle)
     
@@ -59,11 +63,14 @@
     inputvalue.value = '';
     section.value = '';
     
-    
+     
 
     const inc = parseFloat(inputValue)
     totalincome += inc ;
+
     document.getElementById("intotalamound").textContent = totalincome;
+
+    
     chartadding();
   
 
@@ -98,6 +105,7 @@
 
     const tab = document.createElement("td");
     tab.textContent = Sett2;
+
     const tb = document.createElement("td");
     tb.textContent = inputValue2;
 
